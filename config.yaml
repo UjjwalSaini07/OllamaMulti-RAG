@@ -1,0 +1,23 @@
+ollama:
+  embedding_model: "nomic-embed-text"
+  # base_url: http://ollama:11434 # with ollama docker container
+  base_url: http://host.docker.internal:11434 # with ollama locally install instead of docker container on Windows
+  #base_url: http://localhost:11434 # with a complete manual install on linux
+
+chat_config:
+  chat_memory_length: 2
+  number_of_retrieved_documents: 3
+
+pdf_text_splitter:
+  chunk_size: 1024 # no of char: 1024 = 256 tokens
+  overlap: 50
+  separators: ["\n", "\n\n"]
+
+whisper_model: "openai/whisper-small"
+
+chromadb:
+  chromadb_path: "chroma_db"
+  collection_name: "pdfs"
+
+chat_sessions_database_path: "./chatTrack/chatSessionCache.db"
+ 

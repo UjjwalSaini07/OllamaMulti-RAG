@@ -12,3 +12,7 @@ build/
 
 *.log
 *.sqlite3
+
+*chroma_db
+*Demo
+*chatSessionCache.db

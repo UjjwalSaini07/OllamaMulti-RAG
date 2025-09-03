@@ -21,7 +21,6 @@ def get_ollama_embeddings() -> OllamaEmbeddings:
         logger.error("Failed to initialize Ollama embeddings: %s", e)
         raise
 
-
 @lru_cache(maxsize=1)
 def load_vectordb(embeddings: Optional[OllamaEmbeddings] = None) -> Chroma:
     try:

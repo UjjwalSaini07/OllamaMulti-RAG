@@ -19,5 +19,5 @@ chromadb:
   chromadb_path: "chroma_db"
   collection_name: "pdfs"
 
-chat_sessions_database_path: "./chatTrack/chatSessionCache.db"
+chat_sessions_database_path: "./chatTracking/chatSessionCache.db"
  

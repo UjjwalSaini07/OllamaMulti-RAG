@@ -1,0 +1,11 @@
+<!--
+ Gitkeep file for Chat tracking session cache.
+
+ This file is used to ensure the presence of the session cache directory in version control.
+ It is primarily intended for caching database-related data during chat sessions.
+
+ - Maintains session state for chat interactions.
+ - Facilitates efficient retrieval of DB data for active sessions.
+ - Supports tracking and persistence of chat session data.
+
+ Note: This file does not contain any code or data; it serves as a placeholder for directory tracking. -->

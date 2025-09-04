@@ -52,7 +52,7 @@ def get_document_chunks(text_list: List[str]) -> List[Document]:
         for chunk in get_text_chunks(text)
     ]
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 @timeit
 def add_documents_to_db(pdfs_bytes: List[BinaryIO]) -> None:
     """

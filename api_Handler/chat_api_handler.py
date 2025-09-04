@@ -20,7 +20,12 @@ load_dotenv()
 config = load_config()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 class BaseChatAPIHandler:
     DEFAULT_TIMEOUT = 60  # seconds
 
@@ -111,7 +116,12 @@ class OllamaChatAPIHandler(BaseChatAPIHandler):
         for k, v in times.items():
             logger.info("%s: %.4f seconds", k, v)
 
-
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 class ChatAPIHandler:
     """Unified handler that dispatches to OpenAI or Ollama."""
 

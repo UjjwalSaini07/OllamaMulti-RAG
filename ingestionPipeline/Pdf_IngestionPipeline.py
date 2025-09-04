@@ -75,7 +75,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 def log_timed(fn):
     """Simple timing decorator that logs duration in milliseconds."""
 
@@ -151,7 +156,12 @@ class AppCfg:
             ),
         )
 
-
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 # -------------------------
 # Redis helper
 # -------------------------
@@ -394,7 +404,12 @@ class PDFIngestor:
         logger.info("ingestion_done", extra={"docs": len(all_docs), "pdfs": len(results)})
         return len(all_docs)
 
-
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 # -------------------------
 # Public functional API — backwards compatible names
 # -------------------------

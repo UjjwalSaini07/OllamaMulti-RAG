@@ -68,7 +68,7 @@ def _insert_message(chat_history_id: str, sender_type: str, message_type: str, t
     conn.commit()
     logger.debug("Inserted %s message into chat %s", message_type, chat_history_id)
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def save_text_message(chat_history_id: str, sender_type: str, text: str) -> None:
     _insert_message(chat_history_id, sender_type, "text", text=text)
 
@@ -100,6 +100,7 @@ def load_messages(chat_history_id: str) -> List[Dict[str, Any]]:
         )
     return chat_history
 
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def load_last_k_text_messages(chat_history_id: str, k: int) -> List[Dict[str, Any]]:
     """
     Load last K text messages (for context).

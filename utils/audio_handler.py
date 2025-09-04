@@ -41,7 +41,7 @@ def convert_webm_to_wav_ffmpeg(audio_bytes: bytes) -> io.BytesIO:
 
     return io.BytesIO(wav_bytes)
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def convert_bytes_to_array(audio_bytes: bytes) -> tuple:
     """
     Convert audio bytes (WebM or WAV) to numpy array and sample rate.
@@ -73,7 +73,7 @@ def get_asr_pipeline(device: Union[int, str] = "cpu"):
         device=device,
     )
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 @timeit
 def transcribe_audio(audio_bytes: bytes, device: str = "cpu") -> str:
     try:

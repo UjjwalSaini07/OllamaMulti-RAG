@@ -13,6 +13,12 @@ from typing import List, Dict, Optional, Any
 
 load_dotenv()
 
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
@@ -22,6 +28,7 @@ def load_config(file_path: str = "config.yaml") -> Dict[str, Any]:
 
 config = load_config()
 
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def timeit(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -30,7 +37,6 @@ def timeit(func):
         logger.info("Function '%s' executed in %.4f seconds", func.__name__, duration)
         return result
     return wrapper
-
 
 # ---------------------------
 # Commands -/pull, /help, /introduce
@@ -128,7 +134,7 @@ def list_openai_models() -> List[str]:
 
     return [m["id"] for m in response.json().get("data", [])]
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def list_ollama_models() -> List[str]:
     url = f"{config['ollama']['base_url']}/api/tags"
     response = requests.get(url).json()
@@ -144,7 +150,7 @@ def convert_bytes_to_base64(image_bytes: bytes, with_prefix: bool = False) -> st
     b64 = base64.b64encode(image_bytes).decode("utf-8")
     return f"data:image/jpeg;base64,{b64}" if with_prefix else b64
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def convert_ns_to_seconds(ns_value: int) -> float:
     return ns_value / 1_000_000_000
 

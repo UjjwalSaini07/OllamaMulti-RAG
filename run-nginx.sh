@@ -1,9 +1,10 @@
 #!/bin/sh
-# ===========================================
-# Neura-Nix: Multimodal Assistant
-# Author: UjjwalS
-# Website: https://ujjwalsaini.dev
-# ===========================================
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 
 set -e
 echo "🚀 Starting Nginx for Neura-Nix..."

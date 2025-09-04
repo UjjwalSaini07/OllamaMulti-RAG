@@ -19,12 +19,15 @@ from database_operations import (
     delete_chat_history, load_last_k_text_messages_ollama
 )
 
-# ---------------------------
-# Config and Setup
-# ---------------------------
+# ==================================================================
+#  Project   : Neura-Nix - Multimodal AI Assistant {Ollama MultiRag}
+#  Author    : UjjwalS (https://www.ujjwalsaini.dev)
+#  License   : Apache-2.0
+#  Copyright : © 2025 UjjwalS. All rights reserved.
+# ==================================================================
 config = load_config()
 
-# FOr Redis LocalHost
+# For Redis LocalHost
 # redis_client = redis.Redis(
 #     host=os.getenv("REDIS_HOST", "localhost"),
 #     port=int(os.getenv("REDIS_PORT", 6379)),
@@ -84,7 +87,7 @@ def delete_chat_session_history():
     delete_chat_history(st.session_state.session_key)
     st.session_state.session_index_tracker = "new_session"
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 def clear_cache():
     """Clear Redis cache."""
     redis_client.flushdb()
@@ -125,7 +128,7 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded"
     )
-
+    #  Author: UjjwalS (https://www.ujjwalsaini.dev)
     st.write(css, unsafe_allow_html=True)
 
     st.title("Neura-Nix: Multimodal Assistant")
@@ -279,6 +282,6 @@ def main():
         if st.session_state.session_key == "new_session" and st.session_state.new_session_key is not None:
             st.rerun()
 
-
+#  Author: UjjwalS (https://www.ujjwalsaini.dev)
 if __name__ == "__main__":
     main()

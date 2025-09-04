@@ -5,8 +5,8 @@ ollama:
   #base_url: http://localhost:11434 # with a complete manual install on linux
 
 chat_config:
-  chat_memory_length: 2
-  number_of_retrieved_documents: 3
+  chat_memory_length: 3
+  number_of_retrieved_documents: 5
 
 pdf_text_splitter:
   chunk_size: 1024 # no of char: 1024 = 256 tokens
@@ -17,7 +17,6 @@ whisper_model: "openai/whisper-small"
 
 chromadb:
   chromadb_path: "chroma_db"
-  collection_name: "pdfs"
+  collection_name: "pdf_embeddings"
 
 chat_sessions_database_path: "./chatTracking/chatSessionCache.db"
- 

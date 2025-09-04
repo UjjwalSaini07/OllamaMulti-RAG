@@ -1,0 +1,66 @@
+# Maintainer: UjjwalS (https://www.ujjwalsaini.dev)
+
+version: 2
+updates:
+  # PNPM Dependencies
+  - package-ecosystem: "pnpm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "02:00" # 2 AM UTC → 7:30 AM IST
+    ignore:
+      - dependency-name: "eslint"
+        versions: ["<8.0.0"]
+    commit-message:
+      prefix: "chore(deps):"
+    reviewers:
+      - "UjjwalSaini07"
+    assignees:
+      - "UjjwalSaini07"
+
+  # GitHub Actions Dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00" # 3 AM UTC → 8:30 AM IST
+    commit-message:
+      prefix: "chore(actions):"
+    reviewers:
+      - "UjjwalSaini07"
+    assignees:
+      - "UjjwalSaini07"
+
+  # Docker Dependencies
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      time: "04:00" # 4 AM UTC
+    ignore:
+      - dependency-name: "alpine"
+        versions: ["<3.15"] # Require Alpine >= 3.15
+    commit-message:
+      prefix: "fix(docker-deps):"
+    reviewers:
+      - "UjjwalSaini07"
+    assignees:
+      - "UjjwalSaini07"
+
+  # Python (Pip) Dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "05:00" # 5 AM UTC → 10:30 AM IST
+    commit-message:
+      prefix: "fix(python-deps):"
+    reviewers:
+      - "UjjwalSaini07"
+    assignees:
+      - "UjjwalSaini07"
+
+# Versioning strategy
+versioning-strategy: "increase"

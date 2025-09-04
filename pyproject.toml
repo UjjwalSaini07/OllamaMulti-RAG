@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neura-nix"
+version = "1.0.0"
+description = "Neura-Nix: Multimodal AI Assistant for text, images, PDFs, and audio."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "UjjwalS", email = "ujjwalsaini0007+ollama@gmail.com", urls = "ujjwalsaini.dev" }
+]
+maintainers = [
+  { name = "UjjwalS", email = "ujjwalsaini0007+ollama@gmail.com" }
+]
+keywords = [
+  "Neura-Nix",
+  "AI Assistant",
+  "Multimodal AI",
+  "Ollama",
+  "OpenAI",
+  "Streamlit",
+  "Chatbot",
+  "Docker",
+  "Redis",
+  "PDF AI",
+  "Audio Transcription",
+  "Vision AI"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Application Frameworks"
+]
+
+dependencies = [
+  "streamlit",
+  "pillow",
+  "transformers",
+  "librosa",
+  "python-dotenv",
+  "requests",
+  "aiohttp",
+  "PyYAML",
+  "redis",
+  "sqlite3-binary",
+  "torch",
+  "torchvision",
+  "torchaudio"
+]
+
+[project.urls]
+Homepage = "https://www.ujjwalsaini.dev"
+Repository = "https://github.com/UjjwalSaini07/OllamaMulti-RAG"
+Issues = "https://github.com/UjjwalSaini07/OllamaMulti-RAG/issues"
+Documentation = "https://github.com/UjjwalSaini07/OllamaMulti-RAG/blob/main/README.md"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["neura_nix"]
+
+[tool.setuptools.package-data]
+"neura_nix" = ["assets/*", "chat_icons/*", "config.yaml"]
+
+[tool.distutils.bdist_wheel]
+universal = true

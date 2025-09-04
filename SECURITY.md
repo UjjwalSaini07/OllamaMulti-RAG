@@ -2,11 +2,15 @@
 
 ## 🚀 Supported Versions
 
-This project is currently in the **development stage**.
+We’ve released **v1.0.0**, which is now feature-complete and fully supported.  
+Active development for new features has paused while we work on **R&D for the upcoming v2.0**.  
+Critical fixes will still be applied to v1.0.0 as needed.  
 
-| Version | Support Status     |
-| ------- | ------------------ |
-| 0.1.0   | ✅ Fully Supported  |
+| Version | Support Status             |
+| ------- | -------------------------- |
+| 1.0.0   | ✅ Fully Supported          |
+| 2.0.0   | 🔬 In Research & Development |
+
 
 ## 🔐 Our Commitment to Security
 

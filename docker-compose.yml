@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  neuranix-app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: neuranix-app
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    ports:
+      - "8501:8501"
+      - "11434:11434"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_SERVER_FILEWATCHER_TYPE=poll
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    command: >
+      sh -c "
+      python3 database_operations.py &&
+      streamlit run main.py --server.port=8501 --server.address=0.0.0.0
+      "
+
+  redis:
+    image: redis:7-alpine
+    container_name: neuranix-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--save", "", "--appendonly", "no"]

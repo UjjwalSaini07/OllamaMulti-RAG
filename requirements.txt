@@ -1,0 +1,16 @@
+langchain
+langchain-chroma
+langchain-ollama
+chromadb
+transformers
+torch
+pypdfium2
+pyyaml
+python-dotenv
+requests
+aiohttp
+redis
+streamlit
+streamlit-mic-recorder
+Pillow
+librosa

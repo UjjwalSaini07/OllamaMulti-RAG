@@ -89,7 +89,7 @@ After Cloning the repository and choose your preferred installation method.
 1. Modify Docker Compose →  
    - Remove `docker-compose.yml`.  
    - Rename `docker-compose_with_ollama.yml` → `docker-compose.yml`.  
-2. **Set model save path** → Update line `21` in the `docker-compose.yml` file.  
+2. **Set model save path** → Update line `25` in the `docker-compose.yml` file.  
 3. **Run Neura-Nix**  
    ```bash
      docker compose up
@@ -180,13 +180,6 @@ License Credential [Check](https://github.com/UjjwalSaini07/OllamaMulti-RAG/blob
 
 ## Feedback and Contributions 💌
 Feedback and contributions are always welcome! Feel free to open an [Issue](https://github.com/UjjwalSaini07/OllamaMulti-RAG/issues).
-
-<p align="left">
-    <span>Show Some Love</span>
-    <img src="https://i.pinimg.com/originals/ca/97/bd/ca97bde328433c2497b154afdee5f8d7.gif" alt="Heart Icon" style="width: 18px; height: 19px;margin-top: 2px; vertical-align: middle;" />
-    <span>by Starring the repository and Share this product! </span>
-    <img src="https://github.com/user-attachments/assets/059ee3d9-d8ea-4b9a-986d-c9c8e9f47f40" alt="Animation - 1723091871778" style="vertical-align:middle; margin-left: 5px; margin-top: -14px;" />
-</p>
 
 <div align="center">
     <a href="#top">

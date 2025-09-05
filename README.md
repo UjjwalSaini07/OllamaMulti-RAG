@@ -1,7 +1,7 @@
 # 🤖 OllamaMulti-RAG: Neura-Nix
 > **AI-powered assistant that understands Text, Images, PDFs, and Audio — built for productivity, business, and beyond.**  
 
-![Neura-Nix Logo](./assets/Logo.png)
+<img src="./assets/Logo.png" alt="Neura-Nix Logo" width="150"/>
 
 ## 🌟 Introduction
 **Neura-Nix** is a next-gen **multimodal assistant** that combines the power of **Ollama, OpenAI, Whisper, and Redis** into a single streamlined platform.  

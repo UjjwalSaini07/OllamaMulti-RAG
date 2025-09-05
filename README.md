@@ -1,5 +1,5 @@
 # 🤖 OllamaMulti-RAG: Neura-Nix
-> **AI-powered assistant that understands Text, Images, PDFs, and Audio — built for productivity, business, and beyond.**  
+> **An AI-powered multimodal assistant that seamlessly understands Text, Images, PDFs, and Audio — built to boost productivity, empower businesses, and transform everyday workflows.**  
 
 <!--<img src="./assets/Logo.png" alt="Neura-Nix Logo" width="150"/>-->
 

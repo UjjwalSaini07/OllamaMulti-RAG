@@ -45,4 +45,151 @@ so I can share the credentials instead Docker extract your whole memory.
 - **Database** → SQLite (lightweight local DB for session caching)  
 - **Orchestration** → GitHub Actions + Dependabot for CI/CD  
 
+## Getting Started ⚙️
+### Prerequisites
 
+Before setting up **Neura-Nix**, make sure you have the following installed:
+
+- **Python 3.10+** → Required for running the backend (tested on `3.10.12`).
+- **Docker & Docker Compose** → Preferred method for containerized deployment. [Install Docker](https://docs.docker.com/get-docker/)
+- **Git** → For cloning and managing the repository.  [Install Git](https://git-scm.com/downloads).
+- **Redis (Cloud or Local)** → Used for caching and optimizing performance.  
+  Sign up for [Redis Cloud](https://redis.com/try-free/) or run a local instance.
+- **Ollama** → Required for running local multimodal models.  
+  - [Download Ollama Desktop](https://ollama.com/download) (Windows/macOS)  
+  - Or [install manually on Linux](https://github.com/ollama/ollama)
+
+- **(Optional) GPU Support** → If available, install NVIDIA drivers + CUDA toolkit for accelerated model performance.
+
+⚡ *Tip:* Ensure environment variables (like `REDIS_HOST`, `REDIS_PORT`, `OPENAI_API_KEY`) are properly configured in your `.env` file before running the project.
+
+## Installation 🛠️
+You can follow the official setup guide for **Linux, Windows, and Docker** below to run **Neura-Nix {OllamaMulti-RAG}** locally.  
+
+- First Read this [License](https://github.com/UjjwalSaini07/OllamaMulti-RAG/blob/main/LICENSE) & their terms then proceed.
+- Star ⭐ the [Repository](https://github.com/UjjwalSaini07/OllamaMulti-RAG)
+- Fork the repository **(Optional)**
+- Project Setup:
+1. Clone the repository:
+```bash
+    git clone https://github.com/UjjwalSaini07/OllamaMulti-RAG.git
+```
+2. Navigate to the project main directory:
+```bash
+    cd NexGen-Quillix
+```
+
+> [!IMPORTANT]  
+> All these cd directory paths are relative to the root directory of the cloned project.
+
+After Cloning the repository and choose your preferred installation method.  
+
+### 🔹 Method 1: Docker Compose {Not Fastest Step}
+
+1. Modify Docker Compose →  
+   - Remove `docker-compose.yml`.  
+   - Rename `docker-compose_with_ollama.yml` → `docker-compose.yml`.  
+2. **Set model save path** → Update line `21` in the `docker-compose.yml` file.  
+3. **Run Neura-Nix**  
+   ```bash
+     docker compose up
+   ```  
+   ⚡ If you don’t have a GPU → remove the `deploy` section from the compose file.  
+
+4. **Optional Configurations**  
+   - Edit `config.yaml` to match your needs.  
+   - Add custom icons → replace `user_image.png` and/or `bot_image.png` inside the `chat_icons` folder.  
+
+5. **Access the app** → Open [http://0.0.0.0:8501](http://0.0.0.0:8501) in your browser.  
+
+6. **Pull Models** → Visit [Ollama Library](https://ollama.com/library) and pull models:  
+   ```bash
+     /pull MODEL_NAME
+   ```  
+   ✅ You need:  
+   - An **embedding model** → e.g., [nomic-embed-text](https://ollama.com/library/nomic-embed-text) for PDFs.  
+   - An **image-capable model** → e.g., [llava](https://ollama.com/library/llava) for image analysis.  
+
+### 🔹 Method 2: Windows (Best Performance)  
+
+⚠️ Using Ollama inside Docker on Windows can be slow → prefer **local installation**.  
+
+1. Install [Ollama Desktop](https://ollama.com/download).  
+2. Update config → In `config.yaml`, use **line 4 (Windows)** for `base_url`, remove **line 3** {Default is Correct}.  
+
+3. Start Neura-Nix Up the Docker Container:  
+   ```bash
+     docker compose up
+   ```  
+4. Access → [http://0.0.0.0:8501](http://0.0.0.0:8501).  
+5. Pull models as prescribed in Method 1.  
+
+### 🔹 Method 3: Manual Install  
+
+1. Install [Ollama](https://github.com/ollama/ollama).  
+2. Create Python venv (tested with `Python 3.10.12`).  
+3. Install dependencies:  
+   ```bash
+     pip install --upgrade pip
+     pip install -r requirements.txt
+     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+   ```  
+4. Run setup:  
+   ```bash
+     python3 database_operations.py   # initialize SQLite DB
+     streamlit run app.py
+   ```  
+5. Pull models (embedding + multimodal as above).  
+6. Optional → update `config.yaml` and add custom chat icons.  
+
+## 📊 Business Optimization  
+
+Neura-Nix is not just a research tool — it’s built to **optimize workflows and unlock ROI**:  
+
+- 🏢 **Enterprise Teams** → Automate document review, compliance checks, and data-heavy workflows.  
+- 📈 **Startups** → Accelerate content creation, customer support, and product research.  
+- 👨‍💻 **Freelancers & Creators** → Boost productivity with multimodal AI (chat, docs, media).  
+- 🔒 **Privacy by Design** → Keep your sensitive data secure with local-first deployment.  
+
+## 📚 Documentation
+
+To help you navigate and extend **Neura-Nix**, we’ve structured the documentation into multiple layers:
+- [Python Documentation](https://docs.python.org/3/)  
+- [Streamlit Documentation](https://docs.streamlit.io/)  
+- [Ollama Documentation](https://github.com/ollama/ollama)  
+- [OpenAI API Documentation](https://platform.openai.com/docs/)  
+- [Whisper Models (OpenAI)](https://huggingface.co/collections/openai/whisper-release-6501bba2cf999715fd953013)  
+- [Redis Documentation](https://redis.io/docs/)  
+- [ChromaDB Documentation](https://docs.trychroma.com/)  
+- [Docker Documentation](https://docs.docker.com/)  
+- [Nginx Documentation](https://nginx.org/en/docs/)  
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)  
+
+## Author ✍️
+- [@Ujjwal Saini](https://github.com/UjjwalSaini07)
+
+## Contact 📞
+Feel free to reach out if you have any questions or suggestions!
+
+- Raise an issue for the same [Issue](https://github.com/UjjwalSaini07/OllamaMulti-RAG/issues/new)
+- Github: [@Ujjwal Saini](https://github.com/UjjwalSaini07)
+- Mail: [Mail ID](mailto:ujjwalsaini0007+ollama@gmail.com)
+
+## License 📄
+License Credential [Check](https://github.com/UjjwalSaini07/OllamaMulti-RAG/blob/main/LICENSE). </br>You can use this project the way you want. Feel free to credit me if you want to!
+
+## Feedback and Contributions 💌
+Feedback and contributions are always welcome! Feel free to open an [Issue](https://github.com/UjjwalSaini07/OllamaMulti-RAG/issues).
+
+<p align="left">
+    <span>Show Some Love</span>
+    <img src="https://i.pinimg.com/originals/ca/97/bd/ca97bde328433c2497b154afdee5f8d7.gif" alt="Heart Icon" style="width: 18px; height: 19px;margin-top: 2px; vertical-align: middle;" />
+    <span>by Starring the repository and Share this product! </span>
+    <img src="https://github.com/user-attachments/assets/059ee3d9-d8ea-4b9a-986d-c9c8e9f47f40" alt="Animation - 1723091871778" style="vertical-align:middle; margin-left: 5px; margin-top: -14px;" />
+</p>
+
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>

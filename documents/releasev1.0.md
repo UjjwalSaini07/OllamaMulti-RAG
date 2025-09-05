@@ -4,8 +4,6 @@
 **Repository:** [OllamaMulti-RAG](https://github.com/UjjwalSaini07/OllamaMulti-RAG)  
 **Author:** UjjwalS ([ujjwalsaini.dev](https://ujjwalsaini.dev))
 
----
-
 ## 🎉 Highlights
 
 - **First stable, production-ready release of Neura-Nix: a multimodal AI assistant for text, images, PDFs, and audio.**
@@ -13,7 +11,6 @@
 - **Robust security policy and best practices.**
 - **Modular, extensible, and well-documented codebase.**
 
----
 
 ## ✨ New Features
 
@@ -40,8 +37,6 @@
 	- Centralized configuration (`config.yaml`) and metadata.  
 	- Python packaging with `pyproject.toml` and `requirements.txt`.
 
----
-
 ## 🛡️ Security & Best Practices
 
 - **Security Policy:**  
@@ -54,8 +49,6 @@
 	- Dependency pinning and regular updates.  
 	- Clear code ownership and author attribution.  
 	- Automated health checks and container orchestration.
-
----
 
 ## 📝 Upgrade & Usage Notes
 
@@ -71,8 +64,6 @@
 - **Known Limitations:**  
 	- v1.0.0 is feature-complete; new features will be considered for v2.0.0.  
 	- Only critical fixes will be backported to v1.0.0.
-
----
 
 ## 📂 Changelog with Commit IDs
 
@@ -104,14 +95,10 @@
 | a380700 | Adding Apache License 2.0 |
 | 8dd871c | Initial commit |
 
----
-
 ## 🙏 Acknowledgements
 
 Thanks to all contributors and users for feedback and support.  
 For issues, feature requests, or security concerns, please use [GitHub Issues](https://github.com/UjjwalSaini07/OllamaMulti-RAG/issues) or contact the maintainer directly.
-
----
 
 **Neura-Nix v1.0.0** – Built for clarity, efficiency, and adaptability.
 
